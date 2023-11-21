@@ -1,0 +1,73 @@
+BODY;p;body;P;p body
+P;>;p;P;> p
+P; ;p;P;spasi_global p
+P;>;spasi_global;P;>
+P;atribut_global;spasi_global;P;atribut_global
+P;>;atribut_global;P;>
+P;Σ-{<};>;P;>
+P;>;>;P;X >
+P;<;>;P;ε
+P;/p;p;BODY;tagbuka_tagtutup
+
+P;br;p;P;br p
+P;br;em;P;br em
+P;br;b;P;br b
+P;br;strong;P;br strong
+P;br;small;P;br small
+P;>;br;P;> br
+P; ;br;P;spasi_global
+
+P;>;tagbuka_tagtutup;P;>
+
+P;em;p;P;em p
+P;em;b;P;em b
+P;em;strong;P;em strong
+P;em;small;P;em small
+P;em;abbr;P;em abbr
+P;>;em;P;> em
+P; ;em;P;spasi_global em
+P;/em;em;P;tagbuka_tagtutup
+
+P;strong;p;P;strong p
+P;strong;b;P;strong b
+P;strong;small;P;strong small
+P;strong;em;P;strong em
+P;strong;abbr;P;strong abbr
+P;>;strong;P;> strong
+P; ;strong;P;spasi_global strong
+P;/strong;strong;P;tagbuka_tagtutup
+
+P;b;p;P;b p
+P;b;em;P;b em
+P;b;strong;P;b strong
+P;b;small;P;b small
+P;b;abbr;P;b abbr
+P;>;b;P;> b
+P; ;b;P;spasi_global b
+P;/b;b;P;tagbuka_tagtutup
+
+P;abbr;p;P;abbr p
+P;abbr;em;P;abbr em
+P;abbr;strong;P;abbr strong
+P;abbr;small;P;abbr small
+P;abbr;b;P;abbr b
+P;>;abbr;P;> abbr
+P; ;abbr;P;spasi_global abbr
+P;/abbr;abbr;P;tagbuka_tagtutup
+
+P;small;p;P;small p
+P;>;small;P;> small
+P; ;small;P;spasi_global small
+P;/small;small;P;tagbuka_tagtutup
+
+P;a;p;P;a p
+P;a;em;P;a em
+P;a;b;P;a b
+P;a;strong;P;a strong
+P;a;small;P;a small
+P;>;a;P;> a
+P; ;a;P;spasi_a a
+P;>;spasi_a;P;>
+P;atribut_a;spasi_a;P;atribut_a
+P;>;atribut_a;P;>
+P;/a;a;P;tagbuka_tagtutup

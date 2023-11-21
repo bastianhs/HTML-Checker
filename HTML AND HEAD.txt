@@ -1,0 +1,49 @@
+HTML;<;Z0;HTML;< Z0
+HTML;html;<;HTML;html <
+HTML;>;html;HTML;> html
+HTML; ;html;HTML;spasi_global html                      # saat parser membaca input, apapun spasi setelah ini abaikan saja
+HTML;>;spasi_global;HTML;>
+HTML;atribut_global;spasi_global;HTML;atribut_global
+HTML;>;atribut_global;HTML;>
+
+HTML;<;>;HEAD;ε
+
+HEAD;head;html;HEAD;head html
+HEAD;>;head;HEAD;> head
+HEAD; ;head;HEAD;spasi_global head
+HEAD;>;spasi_global;HEAD;>
+HEAD;atribut_global;spasi_global;HEAD;atribut_global
+HEAD;>;atribut_global;HEAD;>
+HEAD;<;>;HEAD;ε
+
+HEAD;>;tagbuka_tagtutup;HEAD;>
+
+HEAD;title;head;TITLE;title head
+TITLE;>;title;TITLE;> title
+TITLE; ;title;TITLE;spasi_global title
+TITLE;>;spasi_global;TITLE;>
+TITLE;atribut_global;spasi_global;TITLE;atribut_global
+TITLE;>;atribut_global;TITLE;>
+TITLE;Σ-{<};>;TITLE;>
+TITLE;>;>;TITLE;X >
+TITLE;<;>;TITLE;ε
+TITLE;/title;title;HEAD;tagbuka_tagtutup
+
+HEAD;script;head;SCRIPT1;script head
+SCRIPT1;>;script;SCRIPT1;> script
+SCRIPT1; ;script;SCRIPT1;spasi_script script
+SCRIPT1;>;spasi_script;SCRIPT1;>
+SCRIPT1;atribut_script;spasi_script;SCRIPT1;atribut_script
+SCRIPT1;>;atribut_script;SCRIPT1;>
+SCRIPT1;Σ-{<};>;SCRIPT1;>
+SCRIPT1;>;>;SCRIPT1;X >
+SCRIPT1;<;>;SCRIPT1;ε
+SCRIPT1;/script;script;HEAD;tagbuka_tagtutup
+
+HEAD;link;head;HEAD;link head
+HEAD; ;link;HEAD;spasi_link
+HEAD;atribut_link;spasi_link;HEAD;atribut_link
+HEAD;>;atribut_link;HEAD;>
+
+HEAD;/head;head;/HEAD;tagbuka_tagtutup
+/HEAD;>;tagbuka_tagtutup;BODY;ε

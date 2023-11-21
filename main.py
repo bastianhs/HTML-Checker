@@ -1,4 +1,4 @@
-f = open('test.txt','r')
+f = open('rule.txt','r')
 kumpulanpda = []
 for i in f:
     kalimat = i
@@ -10,5 +10,4 @@ for i in f:
             for k in range(len(kata)) :
                 pda.append(kata[k])
     kumpulanpda.append(pda)
-print(kumpulanpda) 
-
+print(kumpulanpda)

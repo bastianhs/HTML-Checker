@@ -1,0 +1,140 @@
+atribut_global = id="";class="";style="";id=""class="";id=""style="";class=""style="";id=""class=""style=""
+atribut_link = rel="";id=""rel="";class=""rel="";style=""rel="";id=""class=""rel="";id=""style=""rel="";class=""style=""rel="";id=""class=""style=""rel="";href="";rel=""href="";id=""rel=""href="";class=""rel=""href="";style=""rel=""href="";id=""class=""rel=""href="";id=""style=""rel=""href="";class=""style=""rel=""href="";id=""class=""style=""rel=""href=""
+tambahan_script = src="";id=""src="";class=""src="";style=""src="";id=""class=""src="";id=""style=""src="";class=""style=""src="";id=""class=""style=""src=""
+tambahan_a = href="";id=""href="";class=""href="";style=""href="";id=""class=""href="";id=""style=""href="";class=""style=""href="";id=""class=""style=""href=""
+Σ-{<} = menerima simbol apapun kecuali '<'
+
+setiap kali membaca atribut, masukkan ke dalam array
+[0] id=""
+[1] class=""
+[2] style=""
+[3] src=""
+[4] rel=""
+[5] href=""
+
+
+BODY;body;html;BODY;body html
+BODY;>;body;BODY;> body
+BODY; ;body;BODY;spasi_global body
+BODY;>;spasi_global;BODY;>
+BODY;atribut_global;spasi_global;BODY;atribut_global
+BODY;>;atribut_global;BODY;>
+BODY;Σ-{<};>;BODY;>
+BODY;>;>;BODY;X >
+BODY;<;>;BODY;ε
+
+BODY;>;tagbuka_tagtutup;BODY;>
+
+BODY;link;body;BODY;link body
+BODY; ;link;BODY;spasi_link
+BODY;atribut_link;spasi_link;BODY;atribut_link
+BODY;>;atribut_link;BODY;>
+
+BODY;script;body;SCRIPT2;script body
+SCRIPT2;>;script;SCRIPT2;> script
+SCRIPT2; ;script;SCRIPT2;spasi_script script
+SCRIPT2;>;spasi_script;SCRIPT2;>
+SCRIPT2;atribut_script;spasi_script;SCRIPT2;atribut_script
+SCRIPT2;>;atribut_script;SCRIPT2;>
+SCRIPT2;Σ-{<};>;SCRIPT2;>
+SCRIPT2;>;>;SCRIPT2;X >
+SCRIPT2;<;>;SCRIPT2;ε
+SCRIPT2;/script;script;BODY;tagbuka_tagtutup
+
+BODY;div;body;BODY;div body
+BODY;>;div;BODY;> div
+BODY; ;div;BODY;spasi_global div
+BODY;>;spasi_global;BODY;>
+BODY;atribut_global;spasi_global;BODY;atribut_global
+BODY;>;atribut_global;BODY;>
+BODY;/div;div;BODY;tagbuka_tagtutup
+
+BODY;em;body;BODY;em body
+BODY;em;div;BODY;em div
+BODY;em;b;BODY;em b
+BODY;em;strong;BODY;em strong
+BODY;em;small;BODY;em small
+BODY;em;abbr;BODY;em abbr
+BODY;>;em;BODY;> em
+BODY; ;em;BODY;spasi_global em
+BODY;/em;em;BODY;tagbuka_tagtutup
+
+BODY;strong;body;BODY;strong body
+BODY;strong;div;BODY;strong div
+BODY;strong;b;BODY;strong b
+BODY;strong;small;BODY;strong small
+BODY;strong;em;BODY;strong em
+BODY;strong;abbr;BODY;strong abbr
+BODY;>;strong;BODY;> strong
+BODY; ;strong;BODY;spasi_global strong
+BODY;/strong;strong;BODY;tagbuka_tagtutup
+
+BODY;b;body;BODY;b body
+BODY;b;div;BODY;b div
+BODY;b;em;BODY;b em
+BODY;b;strong;BODY;b strong
+BODY;b;small;BODY;b small
+BODY;b;abbr;BODY;b abbr
+BODY;>;b;BODY;> b
+BODY; ;b;BODY;spasi_global b
+BODY;/b;b;BODY;tagbuka_tagtutup
+
+BODY;abbr;body;BODY;abbr body
+BODY;abbr;div;BODY;abbr div
+BODY;abbr;em;BODY;abbr em
+BODY;abbr;strong;BODY;abbr strong
+BODY;abbr;small;BODY;abbr small
+BODY;abbr;b;BODY;abbr b
+BODY;>;abbr;BODY;> abbr
+BODY; ;abbr;BODY;spasi_global abbr
+BODY;/abbr;abbr;BODY;tagbuka_tagtutup
+
+BODY;small;body;BODY;small body
+BODY;small;div;BODY;small div
+BODY;small;em;BODY;small em
+BODY;small;strong;BODY;small strong
+BODY;small;abbr;BODY;small abbr
+BODY;small;b;BODY;small b
+BODY;>;small;BODY;> small
+BODY; ;small;BODY;spasi_global small
+BODY;/small;small;BODY;tagbuka_tagtutup
+
+BODY;a;body;BODY;a body
+BODY;a;div;BODY;a div
+BODY;a;em;BODY;a em
+BODY;a;b;BODY;a b
+BODY;a;strong;BODY;a strong
+BODY;a;small;BODY;a small
+BODY;>;a;BODY;> a
+BODY; ;a;BODY;spasi_a a
+BODY;>;spasi_a;BODY;>
+BODY;atribut_a;spasi_a;BODY;atribut_a
+BODY;>;atribut_a;BODY;>
+BODY;/a;a;BODY;tagbuka_tagtutup
+
+BODY;br;body;BODY;br body
+BODY;br;div;BODY;br div
+BODY;br;em;BODY;br em
+BODY;br;b;BODY;br b
+BODY;br;strong;BODY;br strong
+BODY;br;small;BODY;br small
+BODY;>;br;BODY;> br
+BODY; ;br;BODY;spasi_global
+
+BODY;hr;body;BODY;hr body
+BODY;hr;div;BODY;hr div
+    BODY;hr;em;BODY;hr em
+    BODY;hr;b;BODY;hr b
+    BODY;hr;strong;BODY;hr strong
+    BODY;hr;small;BODY;hr small
+BODY;>;hr;BODY;> hr
+BODY; ;hr;BODY;spasi_global
+
+BODY;img
+BODY;button
+BODY;form
+BODY;input
+BODY;table
+BODY;tr
+BODY;td
+BODY;th
