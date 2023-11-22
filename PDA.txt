@@ -1,3 +1,37 @@
+HTML HEAD TITLE SCRIPT1 /HEAD BODY SCRIPT2 H P TABLE THTD /BODY /HTML   # list of state
+HTML    # starting state
+Z0      # starting stack
+/HTML   # accepting state
+E       # accepts with empty stack
+
+# input symbol
+< > ' '
+html;/html;head;/head;body;/body
+title;/title;link;script;/script
+div;/div
+h1;/h1;h2;/h2;h3;/h3;h4;/h4;h5;/h5;h6;/h6
+p;/p;br;em;/em;b;/b;abbr;/abbr;strong;/strong;small;/small
+a;/a;hr;img
+form;/form;button;/button;input
+table;/table;tr;/tr;td;/td;th;/th
+    # tokenisasi untuk atribut (input simbol adalah yang pertama)
+atribut_global;id="";class="";style=""
+atribut_link;rel="";id=""rel="";class=""rel="";style=""rel="";rel=""href=""
+atribut_img;src="";id=""src="";class=""src="";style=""src="";src=""alt="";
+atribut_script;script;id="";class="";style="";src="";
+atribut_a;id="";class="";style=""href="";
+atribut_button;id="";class="";style="";type="submit";type="reset";type="button"
+atribut_input;id="";class="";style="";type="text";type="password";type="email";type="number";type="checkbox"
+atribut_form;id="";class="";style="";action="";method="GET";method="POST"
+
+# stack symbol
+Z0;X
+<;>;tagbuka_tagtutup
+spasi_global;spasi_link;spasi_img;spasi_script;spasi_a;spasi_button;spasi_input;spasi_form
+atribut_global;atribut_link;atribut_img;atribut_script;atribut_a;atribut_button;atribut_input;atribut_form
+html;head;body;title;link;script;div;h1;h2;h3;h4;h5;h6;p;br;em;b;abbr;strong;small;a;hr;img;form;button;input;table;tr;td;th
+
+# list of rule of PDA (current state, input symbol, top of stack, next state, what happen to the stack)
 HTML;<;Z0;HTML;< Z0
 HTML;html;<;HTML;html <
 HTML;>;html;HTML;> html
@@ -6,7 +40,7 @@ HTML;>;spasi_global;HTML;>
 HTML;atribut_global;spasi_global;HTML;atribut_global
 HTML;>;atribut_global;HTML;>
 
-HTML;<;>;HEAD;ε
+HTML;<;>;HEAD;epsilon
 
 HEAD;head;html;HEAD;head html
 HEAD;>;head;HEAD;> head
@@ -14,7 +48,7 @@ HEAD; ;head;HEAD;spasi_global head
 HEAD;>;spasi_global;HEAD;>
 HEAD;atribut_global;spasi_global;HEAD;atribut_global
 HEAD;>;atribut_global;HEAD;>
-HEAD;<;>;HEAD;ε
+HEAD;<;>;HEAD;epsilon
 
 HEAD;>;tagbuka_tagtutup;HEAD;>
 
@@ -24,9 +58,9 @@ TITLE; ;title;TITLE;spasi_global title
 TITLE;>;spasi_global;TITLE;>
 TITLE;atribut_global;spasi_global;TITLE;atribut_global
 TITLE;>;atribut_global;TITLE;>
-TITLE;Σ;>;TITLE;>
+TITLE;SIGMA;>;TITLE;>
 TITLE;>;>;TITLE;X >
-TITLE;<;>;TITLE;ε
+TITLE;<;>;TITLE;epsilon
 TITLE;/title;title;HEAD;tagbuka_tagtutup
 
 HEAD;script;head;SCRIPT1;script head
@@ -35,9 +69,9 @@ SCRIPT1; ;script;SCRIPT1;spasi_script script
 SCRIPT1;>;spasi_script;SCRIPT1;>
 SCRIPT1;atribut_script;spasi_script;SCRIPT1;atribut_script
 SCRIPT1;>;atribut_script;SCRIPT1;>
-SCRIPT1;Σ;>;SCRIPT1;>
+SCRIPT1;SIGMA;>;SCRIPT1;>
 SCRIPT1;>;>;SCRIPT1;X >
-SCRIPT1;<;>;SCRIPT1;ε
+SCRIPT1;<;>;SCRIPT1;epsilon
 SCRIPT1;/script;script;HEAD;tagbuka_tagtutup
 
 HEAD;link;head;HEAD;link head
@@ -47,7 +81,7 @@ HEAD;>;atribut_link;HEAD;>
 
 HEAD;/head;head;/HEAD;tagbuka_tagtutup
 /HEAD;>;tagbuka_tagtutup;/HEAD;>
-/HEAD;<;>;BODY;ε
+/HEAD;<;>;BODY;epsilon
 
 BODY;body;html;BODY;body html
 BODY;>;body;BODY;> body
@@ -55,9 +89,9 @@ BODY; ;body;BODY;spasi_global body
 BODY;>;spasi_global;BODY;>
 BODY;atribut_global;spasi_global;BODY;atribut_global
 BODY;>;atribut_global;BODY;>
-BODY;Σ;>;BODY;>
+BODY;SIGMA;>;BODY;>
 BODY;>;>;BODY;X >
-BODY;<;>;BODY;ε
+BODY;<;>;BODY;epsilon
 
 BODY;>;tagbuka_tagtutup;BODY;>
 
@@ -74,9 +108,9 @@ SCRIPT2; ;script;SCRIPT2;spasi_script script
 SCRIPT2;>;spasi_script;SCRIPT2;>
 SCRIPT2;atribut_script;spasi_script;SCRIPT2;atribut_script
 SCRIPT2;>;atribut_script;SCRIPT2;>
-SCRIPT2;Σ;>;SCRIPT2;>
+SCRIPT2;SIGMA;>;SCRIPT2;>
 SCRIPT2;>;>;SCRIPT2;X >
-SCRIPT2;<;>;SCRIPT2;ε
+SCRIPT2;<;>;SCRIPT2;epsilon
 SCRIPT2;/script;script;BODY;tagbuka_tagtutup
 
 BODY;div;body;BODY;div body
@@ -115,9 +149,9 @@ H; ;h6;H;spasi_global h6
 H;>;spasi_global;H;>
 H;atribut_global;spasi_global;H;atribut_global
 H;>;atribut_global;H;>
-H;Σ;>;H;>
+H;SIGMA;>;H;>
 H;>;>;H;X >
-H;<;>;H;ε
+H;<;>;H;epsilon
 H;/h1;h1;BODY;tagbuka_tagtutup
 H;/h2;h2;BODY;tagbuka_tagtutup
 H;/h3;h3;BODY;tagbuka_tagtutup
@@ -234,9 +268,9 @@ P; ;p;P;spasi_global p
 P;>;spasi_global;P;>
 P;atribut_global;spasi_global;P;atribut_global
 P;>;atribut_global;P;>
-P;Σ;>;P;>
+P;SIGMA;>;P;>
 P;>;>;P;X >
-P;<;>;P;ε
+P;<;>;P;epsilon
 P;/p;p;BODY;tagbuka_tagtutup
 
 P;br;p;P;br p
@@ -397,7 +431,7 @@ TABLE;>;spasi_global;TABLE;>
 TABLE;atribut_global;spasi_global;TABLE;atribut_global
 TABLE;>;atribut_global;TABLE;>
 TABLE;>;>;TABLE;X >
-TABLE;<;>;TABLE;ε
+TABLE;<;>;TABLE;epsilon
 TABLE;/table;table;BODY;tagbuka_tagtutup
 
 TABLE;>;tagbuka_tagtutup;TABLE;>
@@ -416,9 +450,9 @@ THTD; ;td;THTD;spasi_global td
 THTD;>;spasi_global;THTD;>
 THTD;atribut_global;spasi_global;THTD;atribut_global
 THTD;>;atribut_global;THTD;>
-THTD;Σ;>;THTD;>
+THTD;SIGMA;>;THTD;>
 THTD;>;>;THTD;X >
-THTD;<;>;THTD;ε
+THTD;<;>;THTD;epsilon
 THTD;/th;th;TABLE;tagbuka_tagtutup
 THTD;/td;td;TABLE;tagbuka_tagtutup
 
@@ -452,8 +486,9 @@ BODY;>;atribut_input;BODY;>
 
 BODY;/body;body;/BODY;tagbuka_tagtutup
 /BODY;>;tagbuka_tagtutup;/BODY;>
-/BODY;<;>;/HTML;ε
+/BODY;<;>;/HTML;epsilon
 
-/HTML;/html;html;/HTML;ε
-/HTML;>;<;/HTML;ε
-/HTML;ε;Z0;/HTML;ε
+/HTML;/html;html;/HTML;epsilon
+/HTML;>;<;/HTML;epsilon
+/HTML;epsilon;Z0;/HTML;epsilon
+.
