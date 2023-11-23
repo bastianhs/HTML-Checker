@@ -37,7 +37,7 @@ for i in range(len(komponenhtml)) :
             tags.append(tag)
             tag = ""
         else :
-            while angka < len(komponenhtml[i])-1 and komponenhtml[i][angka] != " " and komponenhtml[i][angka] != "=" and komponenhtml[i][angka] != ">" and komponenhtml[i][angka] != "-":
+            while angka < len(komponenhtml[i])-1 and komponenhtml[i][angka] != " " and komponenhtml[i][angka] != "=" and komponenhtml[i][angka] != ">" and komponenhtml[i][angka] != "-" and komponenhtml[i][angka] != "<":
                 tag += komponenhtml[i][angka]
                 angka += 1
             if komponenhtml[i][angka] == "=" :
@@ -71,6 +71,13 @@ for i in range(len(komponenhtml)) :
             elif komponenhtml[i][angka] == ">" :
                 angka = angka
                 tags.append(tag)
+            elif komponenhtml[i][angka] == "<" and komponenhtml[i][angka+1] == "/" :
+                tags.append(tag)
+                tag = ""
+                tag += "<"
+                angka += 1
+                tags.append(tag)
+                tag = ""
             else :
                 tag += komponenhtml[i][angka]
                 angka += 1
@@ -80,4 +87,5 @@ for i in range(len(komponenhtml)) :
     alltag.append(tags)
 
 
-print(alltag)
+for i in range(len(alltag)) :
+    print(alltag[i])
