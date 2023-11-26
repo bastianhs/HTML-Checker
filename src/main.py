@@ -1,4 +1,11 @@
 # Fungsi-Fungsi yang dibutuhkan untuk pemrosesan PDA
+def isEmpty(stack):
+# mengecek apakah stack kosong
+    if (stack == []):
+        return True
+    else:
+        return False
+
 def Top(stack):
 # mengembalikan elemen puncak dari stack
     return stack[len(stack)-1]
@@ -21,18 +28,19 @@ def Transisi(stack, rule):
     proses_stack = Split_String(rule[4])
     
     if (len(proses_stack) == 1 and proses_stack[0] != 'epsilon'):
-        if (Top(stack) != proses_stack[0]):         # top stack perlu diganti dengan proses stack
+        if (Top(stack) != proses_stack[0]):                         # top stack perlu diganti dengan proses stack
             stack[len(stack)-1] = proses_stack[0]
     elif (len(proses_stack) == 1 and proses_stack[0] == 'epsilon'): # top stack perlu dihapus
         stack.pop()
-    else:   # len(proses_stack) = 2
-        stack.append(proses_stack[0]) # stack perlu ditambah dengan proses stack, top stack yang lama tidak dihapus
+    else:                               # len(proses_stack) = 2
+        stack.append(proses_stack[0])   # stack perlu ditambah dengan proses stack, top stack yang lama tidak dihapus
     
     return stack
 
 # Fungsi-Fungsi yang dibutuhkan untuk parsing dan tokenisasi
 def parsing_space(tag):
 # memisahkan spasi yang terdapat setelah tag
+# misal 'body ' menjadi 'body' dan ' '
     hasil = []
 
     for i in range(len(tag)):
@@ -108,11 +116,11 @@ while rule != '.':          # mengambil rule dari file PDA
         rule = f.readline()
 
     kalimat = rule.split("\n")
-    for j in range(len(kalimat)) :
+    for j in range(len(kalimat)):
         kata = kalimat[j].split(";")
-        if len(kata) > 1 :
+        if len(kata) > 1:
             pda = []    
-            for k in range(len(kata)) :
+            for k in range(len(kata)):
                 pda.append(kata[k])
     Rule_of_PDA.append(pda)
     rule = f.readline()
@@ -121,27 +129,27 @@ f.close()
 
 """ ******************** Membaca file HTML ******************** """
 komponenhtml = []
-with open("../test/" + FILE_HTML, 'r') as file:          # Baca file
+with open("../test/" + FILE_HTML, 'r') as file:          # Baca file HTML
     content = file.read()
     strFile = content
     komponenhtml.append(strFile)
 komponenhtml = komponenhtml[0].split("\n")
 
-current_line = 1
-if (komponenhtml[0] == "<!DOCTYPE html>") :
+current_line = 1                                        # menyimpan line saat ini
+if (komponenhtml[0] == "<!DOCTYPE html>"):              # menghapus <!DOCTYPE html> dari komponenhtml jika ada
     komponenhtml.pop(0)
     current_line += 1
 alltag = []
 
 list_of_X_location = []             # menyimpan lokasi currentline setiap kali X dipush ke stack
 list_of_X = []                      # menyimpan semua input yang menyebabkan X dipush ke stack
-current_condition = ['','','']      # menyimpan kondisi saat ini (state, input, top stack)
-stack = ['Z0']                      # start stack
-current_state = 'HTML'              # start state
-current_token = ''                  # menyimpan input saat ini
+current_condition = ['','','']      # menyimpan kondisi saat ini [state, input, top stack]
+stack = ['Z0']                      # current stack
+current_state = 'HTML'              # current state
+current_token = ''                  # menyimpan input simbol saat ini
 
 is_in_rule = False
-isSesudahTag = False
+isSesudahTag = True
 
 for i in range(len(komponenhtml)):
     angka = 0
@@ -152,12 +160,12 @@ for i in range(len(komponenhtml)):
 
     """ ***** proses tokenisasi per line ***** """
     while (angka < len(komponenhtml[i])) and (not isAllBlankSpace(komponenhtml[i])):
-        while komponenhtml[i][angka] == " " :
+        while komponenhtml[i][angka] == " ":
             angka += 1
-        if komponenhtml[i][angka] == "<" :
+        if komponenhtml[i][angka] == "<":
             tag += komponenhtml[i][angka]
             angka += 1
-            if komponenhtml[i][angka] == "!" and komponenhtml[i][angka+1] == "-" and komponenhtml[i][angka+2] == "-" :
+            if komponenhtml[i][angka] == "!" and komponenhtml[i][angka+1] == "-" and komponenhtml[i][angka+2] == "-":
                 tag += komponenhtml[i][angka]
                 tag += komponenhtml[i][angka+1]
                 tag += komponenhtml[i][angka+2]
@@ -172,28 +180,28 @@ for i in range(len(komponenhtml)):
             angka += 1
             tags.append(tag)
             tag = ""
-        else :
+        else:
             while angka < len(komponenhtml[i])-1 and komponenhtml[i][angka] != " " and komponenhtml[i][angka] != "=" and komponenhtml[i][angka] != ">" and komponenhtml[i][angka] != "-" and komponenhtml[i][angka] != "<":
                 tag += komponenhtml[i][angka]
                 angka += 1
-            if komponenhtml[i][angka] == "=" :
+            if komponenhtml[i][angka] == "=":
                 tag += komponenhtml[i][angka]
                 while komponenhtml[i][angka] == " ":
                     angka += 1
                 angka += 1
-                if komponenhtml[i][angka] == '"' :
+                if komponenhtml[i][angka] == '"':
                     tag += komponenhtml[i][angka]
                     angka += 1
-                while komponenhtml[i][angka] != '"' and angka < len(komponenhtml[i])-1 :
+                while komponenhtml[i][angka] != '"' and angka < len(komponenhtml[i])-1:
                     isiParam += komponenhtml[i][angka]
                     angka += 1
-                if komponenhtml[i][angka] == '"' :
+                if komponenhtml[i][angka] == '"':
                     tag += komponenhtml[i][angka]
                     angka += 1
                 tags.append(tag)
                 tags.append(isiParam)
-            elif komponenhtml[i][angka] == "-" :
-                if komponenhtml[i][angka+1] == "-" and komponenhtml[i][angka+2] == ">" :
+            elif komponenhtml[i][angka] == "-":
+                if komponenhtml[i][angka+1] == "-" and komponenhtml[i][angka+2] == ">":
                     tags.append(tag)
                     tag = ""
                     tag += komponenhtml[i][angka]
@@ -204,17 +212,20 @@ for i in range(len(komponenhtml)):
                     tag += komponenhtml[i][angka]
                     angka += 1
                 tags.append(tag)
-            elif komponenhtml[i][angka] == ">" :
+            elif komponenhtml[i][angka] == ">":
                 angka = angka
                 tags.append(tag)
-            elif komponenhtml[i][angka] == "<" and komponenhtml[i][angka+1] == "/" :
+            elif komponenhtml[i][angka] == "<" and komponenhtml[i][angka+1] == "/":
                 tags.append(tag)
                 tag = ""
                 tag += "<"
                 angka += 1
                 tags.append(tag)
                 tag = ""
-            else :
+            elif komponenhtml[i][angka] == "<":
+                tags.append(tag)
+                tag = ""
+            else:
                 tag += komponenhtml[i][angka]
                 angka += 1
                 tags.append(tag)
@@ -240,8 +251,7 @@ for i in range(len(komponenhtml)):
             if current_condition[0] == k[0] and current_condition[1] == k[1] and current_condition[2] == k[2]:
                 is_in_rule = True
                 break
-        
-        # print(current_condition[1])
+
         if is_in_rule:
             stack = Transisi(stack, k)
             current_state = k[3]
@@ -258,12 +268,28 @@ for i in range(len(komponenhtml)):
             stack.append('X')
             list_of_X_location.append(current_line)
             list_of_X.append(current_condition[1])
-        # print(stack)
+
     current_line += 1
 
-if (stack == ['Z0']):
-    print("Valid")
+# menghilangkan Z0 dari stack dengan epsilon transisi
+current_condition[0] = current_state
+current_condition[1] = 'epsilon'
+current_condition[2] = Top(stack)
+
+for k in Rule_of_PDA:
+    if current_condition[0] == k[0] and current_condition[1] == k[1] and current_condition[2] == k[2]:
+        is_in_rule = True
+        break
+
+if is_in_rule:
+    stack = Transisi(stack, k)
+    current_state = k[3]
 else:
-    print("Tidak Valid")
+    stack.append('X')
+
+if (isEmpty(stack)):
+    print("Accepted")
+else:
+    print("Rejected")
     print("Terdapat kesalahan pada line:", list_of_X_location[0])
     print("Kesalahan:", list_of_X[0])

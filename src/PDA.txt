@@ -5,7 +5,7 @@ Z0      # starting stack
 E       # accepts with empty stack
 
 # input symbol
-<;>;' ';<!--;-->;SIGMA
+<;>;' ';<!--;-->;SIGMA              # ' ' menyimbolkan spasi
 html;/html;head;/head;body;/body
 title;/title;link;script;/script
 div;/div
@@ -15,7 +15,7 @@ a;/a;hr;img
 form;/form;button;/button;input
 table;/table;tr;/tr;td;/td;th;/th
     # tokenisasi untuk atribut
-atribut_global          # { id="";class="";style="" }
+atribut_global                      # { id="";class="";style="" }
 rel="";href="";src="";alt="";
 type="submit";type="reset";type="button"
 type="text";type="password";type="email";type="number";type="checkbox"
@@ -96,8 +96,8 @@ SCRIPT; ;scriptdiv;SCRIPT;spasi_script scriptdiv
 SCRIPT; ;scriptform;SCRIPT;spasi_script scriptform
 SCRIPT;>;spasi_script;SCRIPT;>
 SCRIPT;atribut_global;spasi_script;SCRIPT;spasi_script
-SCRIPT:src="";spasi_script;SCRIPT;spasi_script
-SCRIPT: ;spasi_script;SCRIPT;spasi_script
+SCRIPT;src="";spasi_script;SCRIPT;spasi_script
+SCRIPT; ;spasi_script;SCRIPT;spasi_script
 SCRIPT;SIGMA;>;SCRIPT;>
 SCRIPT;>;>;SCRIPT;X >
 SCRIPT;<;>;SCRIPT;epsilon
@@ -241,6 +241,29 @@ BODY;atribut_global;src="";BODY;src=""
 BODY;alt="";src="";BODY;src=""
 BODY; ;src="";BODY;src=""
 BODY;>;src="";BODY;>
+
+BODY;button;body;BODY;button body
+BODY;>;button;BODY;> button
+BODY; ;button;BODY;spasi_button button
+BODY;>;spasi_button;BODY;>
+BODY;atribut_global;spasi_button;BODY;spasi_button
+BODY;type="submit";spasi_button;BODY;spasi_button
+BODY;type="reset";spasi_button;BODY;spasi_button
+BODY;type="button";spasi_button;BODY;spasi_button
+BODY; ;spasi_button;BODY;spasi_button
+BODY;/button;button;BODY;tagbuka_tagtutup
+
+BODY;input;body;BODY;input body
+BODY;>;input;BODY;>
+BODY; ;input;BODY;spasi_input
+BODY;>;spasi_input;BODY;>
+BODY;atribut_global;spasi_input;BODY;spasi_input
+BODY;type="text";spasi_input;BODY;spasi_input
+BODY;type="password";spasi_input;BODY;spasi_input
+BODY;type="email";spasi_input;BODY;spasi_input
+BODY;type="number";spasi_input;BODY;spasi_input
+BODY;type="checkbox";spasi_input;BODY;spasi_input
+BODY; ;spasi_input;BODY;spasi_input
 
 BODY;h1;body;H;h1body body
 BODY;h2;body;H;h2body body
@@ -796,6 +819,33 @@ DIV;atribut_global;src="";DIV;src=""
 DIV;alt="";src="";DIV;src=""
 DIV; ;src="";DIV;src=""
 DIV;>;src="";DIV;>
+
+DIV;button;div;DIV;button div
+DIV;button;divbody;DIV;button divbody
+DIV;button;divform;DIV;button divform
+DIV;>;button;DIV;> button
+DIV; ;button;DIV;spasi_button button
+DIV;>;spasi_button;DIV;>
+DIV;atribut_global;spasi_button;DIV;spasi_button
+DIV;type="submit";spasi_button;DIV;spasi_button
+DIV;type="reset";spasi_button;DIV;spasi_button
+DIV;type="button";spasi_button;DIV;spasi_button
+DIV; ;spasi_button;DIV;spasi_button
+DIV;/button;button;DIV;tagbuka_tagtutup
+
+DIV;input;div;DIV;input div
+DIV;input;divbody;DIV;input divbody
+DIV;input;divform;DIV;input divform
+DIV;>;input;DIV;>
+DIV; ;input;DIV;spasi_input
+DIV;>;spasi_input;DIV;>
+DIV;atribut_global;spasi_input;DIV;spasi_input
+DIV;type="text";spasi_input;DIV;spasi_input
+DIV;type="password";spasi_input;DIV;spasi_input
+DIV;type="email";spasi_input;DIV;spasi_input
+DIV;type="number";spasi_input;DIV;spasi_input
+DIV;type="checkbox";spasi_input;DIV;spasi_input
+DIV; ;spasi_input;DIV;spasi_input
 
 BODY;form;body;FORM;formbody body
 DIV;form;div;FORM;formdiv div
