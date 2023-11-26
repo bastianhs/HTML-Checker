@@ -1,7 +1,0 @@
-/html, html / epsilon
->, < / epsilon
-epsilon, Z0 / epsilon
-
-<!--, Z0 / <!-- Z0
-SIGMA, <!-- / <!--
--->, <!-- / epsilon
