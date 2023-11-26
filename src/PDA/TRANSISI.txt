@@ -1,0 +1,188 @@
+# dari HTML ke HEAD
+<, > / epsilon
+
+# dari HEAD ke TITLE
+title, head / title head
+
+# dari TITLE ke HEAD
+/title, title / tagbuka_tagtutup
+
+# dari HEAD ke SCRIPT
+script, head / scripthead head
+
+# dari BODY ke SCRIPT
+script, body / scriptbody body
+
+# dari DIV ke SCRIPT
+script, div / scriptdiv div
+script, divbody / scriptdiv divbody
+script, divform / scriptdiv divform
+
+# dari FORM ke SCRIPT
+script, form / scriptform form
+
+# dari SCRIPT ke HEAD
+/script, scripthead / tagbuka_tagtutup
+
+# dari SCRIPT ke BODY
+/script, scriptbody / tagbuka_tagtutup
+
+# dari SCRIPT ke DIV
+/script, scriptdiv / tagbuka_tagtutup
+
+# dari SCRIPT ke FORM
+/script, scriptform / tagbuka_tagtutup
+
+# dari HEAD ke /HEAD
+/head, head / tagbuka_tagtutup
+
+# dari /HEAD ke BODY
+<, > / epsilon
+
+# dari BODY ke H
+h1, body / h1body body
+h2, body / h2body body
+h3, body / h3body body
+h4, body / h4body body
+h5, body / h5body body
+h6, body / h6body body
+
+# dari DIV ke H
+h1, div / h1div div
+h2, div / h2div div
+h3, div / h3div div
+h4, div / h4div div
+h5, div / h5div div
+h6, div / h6div div
+h1, divbody / h1div divbody
+h2, divbody / h2div divbody
+h3, divbody / h3div divbody
+h4, divbody / h4div divbody
+h5, divbody / h5div divbody
+h6, divbody / h6div divbody
+h1, divform / h1div divform
+h2, divform / h2div divform
+h3, divform / h3div divform
+h4, divform / h4div divform
+h5, divform / h5div divform
+h6, divform / h6div divform
+
+# dari FORM ke H
+h1, formbody / h1form formbody
+h2, formbody / h2form formbody
+h3, formbody / h3form formbody
+h4, formbody / h4form formbody
+h5, formbody / h5form formbody
+h6, formbody / h6form formbody
+h1, formdiv / h1form formdiv
+h2, formdiv / h2form formdiv
+h3, formdiv / h3form formdiv
+h4, formdiv / h4form formdiv
+h5, formdiv / h5form formdiv
+h6, formdiv / h6form formdiv
+
+# dari H ke BODY
+/h1, h1body / tagbuka_tagtutup
+/h2, h2body / tagbuka_tagtutup
+/h3, h3body / tagbuka_tagtutup
+/h4, h4body / tagbuka_tagtutup
+/h5, h5body / tagbuka_tagtutup
+/h6, h6body / tagbuka_tagtutup
+
+# dari H ke DIV
+/h1, h1div / tagbuka_tagtutup
+/h2, h2div / tagbuka_tagtutup
+/h3, h3div / tagbuka_tagtutup
+/h4, h4div / tagbuka_tagtutup
+/h5, h5div / tagbuka_tagtutup
+/h6, h6div / tagbuka_tagtutup
+
+# dari H ke FORM
+/h1, h1form / tagbuka_tagtutup
+/h2, h2form / tagbuka_tagtutup
+/h3, h3form / tagbuka_tagtutup
+/h4, h4form / tagbuka_tagtutup
+/h5, h5form / tagbuka_tagtutup
+/h6, h6form / tagbuka_tagtutup
+
+# dari BODY ke P
+p, body / pbody body
+
+# dari DIV ke P
+p, div / pdiv div
+p, divbody / pdiv divbody
+p, divform / pdiv divform
+
+# dari FORM ke P
+p, formbody / pform formbody
+p, formdiv / pform formdiv
+
+# dari P ke BODY
+/p, pbody / tagbuka_tagtutup
+
+# dari P ke BODY
+/p, pdiv / tagbuka_tagtutup
+
+# dari P ke BODY
+/p, pform / tagbuka_tagtutup
+
+# dari BODY ke DIV
+div, body / divbody body
+
+# dari FORM ke DIV
+div, formbody / divform formbody
+div, formdiv / divform formdiv
+
+# dari DIV ke BODY
+/div, divbody / tagbuka_tagtutup
+
+# dari DIV ke FORM
+/div, divform / tagbuka_tagtutup
+
+# dari BODY ke FORM
+form, body / formbody body
+
+# dari DIV ke FORM
+form, div / formdiv div
+form, divbody / formdiv divbody
+
+# dari FORM ke BODY
+/form, formbody / tagbuka_tagtutup
+
+# dari FORM ke DIV
+/form, formdiv / tagbuka_tagtutup
+
+# dari BODY ke TABLE
+table, body / tablebody body
+
+# dari DIV ke TABLE
+table, div / tablediv div
+table, divbody / tablediv divbody
+table, divform / tablediv divform
+
+# dari FORM ke TABLE
+table, formbody / tableform formbody
+table, formdiv / tableform formdiv
+
+# dari TABLE ke THTD
+th, tr / th tr
+td, tr / td tr
+
+# dari THTD ke TABLE
+/th, th / tagbuka_tagtutup
+/td, td / tagbuka_tagtutup
+
+# dari TABLE ke BODY
+/table, tablebody / tagbuka_tagtutup
+
+# dari TABLE ke 
+/table, tablediv / tagbuka_tagtutup
+
+# dari TABLE ke 
+/table, tableform / tagbuka_tagtutup
+
+# dari BODY ke /BODY
+/body, body / tagbuka_tagtutup
+
+# dari /BODY ke /HTML
+<, > / epsilon

@@ -728,7 +728,7 @@ DIV;/strong;strong;DIV;tagbuka_tagtutup
 
 DIV;b;divbody;DIV;b divbody
 DIV;b;divform;DIV;b divform
-DIV;b;divform;DIV;b div
+DIV;b;div;DIV;b div
 DIV;b;b;DIV;b b
 DIV;b;em;DIV;b em
 DIV;b;strong;DIV;b strong

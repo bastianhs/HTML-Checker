@@ -1,0 +1,11 @@
+>, title / > title
+_, title / spasi_global title
+>, spasi_global / >
+atribut_global, spasi_global / spasi_global
+_, spasi_global / spasi_global
+SIGMA, > / >
+>, > / X >
+<, > / epsilon
+<!--, > / <!-- >
+SIGMA, <!-- / <!--
+-->, <!-- / epsilon

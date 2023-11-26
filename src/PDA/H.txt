@@ -1,0 +1,239 @@
+>, h1body / > h1body
+>, h2body / > h2body
+>, h3body / > h3body
+>, h4body / > h4body
+>, h5body / > h5body
+>, h6body / > h6body
+>, h1div / > h1div
+>, h2div / > h2div
+>, h3div / > h3div
+>, h4div / > h4div
+>, h5div / > h5div
+>, h6div / > h6div
+>, h1form / > h1form
+>, h2form / > h2form
+>, h3form / > h3form
+>, h4form / > h4form
+>, h5form / > h5form
+>, h6form / > h6form
+_, h1body / spasi_global h1body
+_, h2body / spasi_global h2body
+_, h3body / spasi_global h3body
+_, h4body / spasi_global h4body
+_, h5body / spasi_global h5body
+_, h6body / spasi_global h6body
+_, h1div / spasi_global h1div
+_, h2div / spasi_global h2div
+_, h3div / spasi_global h3div
+_, h4div / spasi_global h4div
+_, h5div / spasi_global h5div
+_, h6div / spasi_global h6div
+_, h1form / spasi_global h1form
+_, h2form / spasi_global h2form
+_, h3form / spasi_global h3form
+_, h4form / spasi_global h4form
+_, h5form / spasi_global h5form
+_, h6form / spasi_global h6form
+
+>, spasi_global / >
+atribut_global, spasi_global / spasi_global
+_, spasi_global / spasi_global
+SIGMA, > / >
+>, > / X >
+<, > / epsilon
+
+<!--, > / <!-- >
+SIGMA, <!-- / <!--
+-->, <!-- / epsilon
+>, tagbuka_tagtutup / >
+
+br, h1body / br h1body
+br, h2body / br h2body
+br, h3body / br h3body
+br, h4body / br h4body
+br, h5body / br h5body
+br, h6body / br h6body
+br, h1div / br h1div
+br, h2div / br h2div
+br, h3div / br h3div
+br, h4div / br h4div
+br, h5div / br h5div
+br, h6div / br h6div
+br, h1form / br h1form
+br, h2form / br h2form
+br, h3form / br h3form
+br, h4form / br h4form
+br, h5form / br h5form
+br, h6form / br h6form
+br, em / br em
+br, b / br b
+br, strong / br strong
+br, small / br small
+>, br / >
+_, br / spasi_global
+
+em, h1body / em h1body
+em, h2body / em h2body
+em, h3body / em h3body
+em, h4body / em h4body
+em, h5body / em h5body
+em, h6body / em h6body
+em, h1div / em h1div
+em, h2div / em h2div
+em, h3div / em h3div
+em, h4div / em h4div
+em, h5div / em h5div
+em, h6div / em h6div
+em, h1form / em h1form
+em, h2form / em h2form
+em, h3form / em h3form
+em, h4form / em h4form
+em, h5form / em h5form
+em, h6form / em h6form
+em, em / em em
+em, b / em b
+em, strong / em strong
+em, small / em small
+em, abbr / em abbr
+>, em / > em
+_, em / spasi_global em
+/em, em / tagbuka_tagtutup
+
+strong, h1body / strong h1body
+strong, h2body / strong h2body
+strong, h3body / strong h3body
+strong, h4body / strong h4body
+strong, h5body / strong h5body
+strong, h6body / strong h6body
+strong, h1div / strong h1div
+strong, h2div / strong h2div
+strong, h3div / strong h3div
+strong, h4div / strong h4div
+strong, h5div / strong h5div
+strong, h6div / strong h6div
+strong, h1form / strong h1form
+strong, h2form / strong h2form
+strong, h3form / strong h3form
+strong, h4form / strong h4form
+strong, h5form / strong h5form
+strong, h6form / strong h6form
+strong, strong / strong strong
+strong, b / strong b
+strong, small / strong small
+strong, em / strong em
+strong, abbr / strong abbr
+>, strong / > strong
+_, strong / spasi_global strong
+/strong, strong / tagbuka_tagtutup
+
+b, h1body / b h1body
+b, h2body / b h2body
+b, h3body / b h3body
+b, h4body / b h4body
+b, h5body / b h5body
+b, h6body / b h6body
+b, h1div / b h1div
+b, h2div / b h2div
+b, h3div / b h3div
+b, h4div / b h4div
+b, h5div / b h5div
+b, h6div / b h6div
+b, h1form / b h1form
+b, h2form / b h2form
+b, h3form / b h3form
+b, h4form / b h4form
+b, h5form / b h5form
+b, h6form / b h6form
+b, b / b b
+b, em / b em
+b, strong / b strong
+b, small / b small
+b, abbr / b abbr
+>, b / > b
+_, b / spasi_global b
+/b, b / tagbuka_tagtutup
+
+abbr, h1body / abbr h1body
+abbr, h2body / abbr h2body
+abbr, h3body / abbr h3body
+abbr, h4body / abbr h4body
+abbr, h5body / abbr h5body
+abbr, h6body / abbr h6body
+abbr, h1div / abbr h1div
+abbr, h2div / abbr h2div
+abbr, h3div / abbr h3div
+abbr, h4div / abbr h4div
+abbr, h5div / abbr h5div
+abbr, h6div / abbr h6div
+abbr, h1form / abbr h1form
+abbr, h2form / abbr h2form
+abbr, h3form / abbr h3form
+abbr, h4form / abbr h4form
+abbr, h5form / abbr h5form
+abbr, h6form / abbr h6form
+abbr, abbr / abbr abbr
+abbr, em / abbr em
+abbr, strong / abbr strong
+abbr, small / abbr small
+abbr, b / abbr b
+>, abbr / > abbr
+_, abbr / spasi_global abbr
+/abbr, abbr / tagbuka_tagtutup
+
+small, h1body / small h1body
+small, h2body / small h2body
+small, h3body / small h3body
+small, h4body / small h4body
+small, h5body / small h5body
+small, h6body / small h6body
+small, h1div / small h1div
+small, h2div / small h2div
+small, h3div / small h3div
+small, h4div / small h4div
+small, h5div / small h5div
+small, h6div / small h6div
+small, h1form / small h1form
+small, h2form / small h2form
+small, h3form / small h3form
+small, h4form / small h4form
+small, h5form / small h5form
+small, h6form / small h6form
+small, small / small small
+small, em / small em
+small, strong / small strong
+small, abbr / small abbr
+small, b / small b
+>, small / > small
+_, small / spasi_global small
+/small, small / tagbuka_tagtutup
+
+a, h1body / a h1body
+a, h2body / a h2body
+a, h3body / a h3body
+a, h4body / a h4body
+a, h5body / a h5body
+a, h6body / a h6body
+a, h1div / a h1div
+a, h2div / a h2div
+a, h3div / a h3div
+a, h4div / a h4div
+a, h5div / a h5div
+a, h6div / a h6div
+a, h1form / a h1form
+a, h2form / a h2form
+a, h3form / a h3form
+a, h4form / a h4form
+a, h5form / a h5form
+a, h6form / a h6form
+a, a / a a
+a, em / a em
+a, b / a b
+a, strong / a strong
+a, small / a small
+>, a / > a
+_, a / spasi_a a
+>, spasi_a / >
+atribut_global, spasi_a / spasi_a
+href="", spasi_a / spasi_a
+_, spasi_a / spasi_a
+/a, a / tagbuka_tagtutup
