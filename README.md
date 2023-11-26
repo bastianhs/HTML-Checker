@@ -7,3 +7,10 @@ How to run: <br />
 `cd HTML-Checker` <br />
 `cd src` <br />
 `python3 main.py` <br />
+
+Anggota kelompok:
+| NIM |  Nama Anggota  |
+|:-----|:--------:|
+| 13522006 | Agil Fadillah Sabri |
+| 13522034 |  Bastian H. Suryapratama  |
+| 13522052 | Haikal Assyauqi |
